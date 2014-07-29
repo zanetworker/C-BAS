@@ -1,0 +1,12 @@
+*.pyc
+.DS_Store
+*.swp
+*.swo
+*~
+*.json
+log/*
+adminconsole/*
+.idea/*
+_deployment
+rmpyc.sh
+count_lines.sh
