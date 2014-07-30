@@ -1,7 +1,9 @@
 
 #Description 
 
-The C-BAS is a framework for Authentication, Authorization and Accounting (AAA). It encoroprates several sub-frameworks such 
+C-BAS is a certificate-based AAA architecture for SDN experimental facilities, which is by design both secure and
+flexible. It incoroprates several sub-frameworks such 
+
 - [OHouse](https://github.com/motine/Ohouse) 
 - [OCF](https://github.com/fp7-ofelia/ocf) 
 
