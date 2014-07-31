@@ -49,7 +49,7 @@ CONFIG_PATH = expand_amsoil_path('deploy/config.json')
 try:
     CONFIG = json.load(open(CONFIG_PATH))
 except Exception:
-    raise  MissingFileOrData(MONGO_CONFIG_PATH)
+    raise  MissingFileOrData(CONFIG_PATH)
 
 
 default_ip, default_port, default_name= 'localhost', '27017', 'ohouse'
