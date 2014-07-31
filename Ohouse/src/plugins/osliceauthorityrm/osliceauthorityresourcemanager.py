@@ -95,7 +95,7 @@ class OSliceAuthorityResourceManager(object):
 
     def credential_types(self):
         """
-        Return the credential types implemented by this Slice Authority.
+        Return the  credential types implemented by this Slice Authority.
         """
         return self.SUPPORTED_CREDENTIAL_TYPES
 
