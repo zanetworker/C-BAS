@@ -2,8 +2,6 @@
 .DS_Store
 *.swp
 *.swo
-*~
-log/*
 adminconsole/*
 .idea/*
 _deployment
