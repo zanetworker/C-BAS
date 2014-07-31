@@ -3,7 +3,6 @@
 *.swo
 .idea/*
 *.pub
-keys/*
 *.json
 *~
 
