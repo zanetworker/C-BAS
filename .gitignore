@@ -3,7 +3,6 @@
 *.swp
 *.swo
 *~
-log/*
 adminconsole/*
 .idea/*
 keys/* 
