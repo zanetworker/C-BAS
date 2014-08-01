@@ -211,7 +211,11 @@ class ResourceManagerTools(object):
             The contents of the file
         """
         with file(path) as f:
-            s = f.read()
+
+            try:
+                s = f.read()
+            except Exception, e:
+                print e
             return s
 
     @serviceinterface

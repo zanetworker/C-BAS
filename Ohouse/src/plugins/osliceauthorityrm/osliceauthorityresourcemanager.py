@@ -6,7 +6,7 @@ import uuid
 import pyrfc3339
 import datetime
 import pytz
-
+import xml.etree.ElementTree as ET
 from amsoil.config import  expand_amsoil_path
 
 class OSliceAuthorityResourceManager(object):
@@ -112,8 +112,12 @@ class OSliceAuthorityResourceManager(object):
             * SLICE_CREATION: get the time now and convert it into RFC3339 form
             * SLICE_EXPIRED: slice object has just been created, so it is has not
                 yet expired
-
         """
+
+        u_c = None
+        credentials_testing = self._resource_manager_tools.read_file(OSliceAuthorityResourceManager.KEY_PATH + "credentials_test")
+        root = ET.fromstring(credentials_testing)
+
         self._resource_manager_tools.validate_credentials(credentials)
         config = pm.getService('config')
         geniutil = pm.getService('geniutil')
@@ -126,7 +130,15 @@ class OSliceAuthorityResourceManager(object):
 
         #Generating Slice Credentials
         s_c, s_pu, s_pr = geniutil.create_certificate(fields['SLICE_URN'], self._sa_pr, self._sa_c)
-        fields['SLICE_CREDENTIALS'] = geniutil.create_credential(s_c, s_c, self._sa_pr, self._sa_c, "slice",
+
+        #use the user credentials
+        for child in root:
+            if child.tag == 'credential':
+                u_c = child[2].text
+            else:
+                u_c = s_c
+
+        fields['SLICE_CREDENTIALS'] = geniutil.create_credential(u_c, s_c, self._sa_pr, self._sa_c, "slice",
                                                 OSliceAuthorityResourceManager.CRED_EXPIRY)
 
         return self._resource_manager_tools.object_create(self.AUTHORITY_NAME, fields, 'slice')
