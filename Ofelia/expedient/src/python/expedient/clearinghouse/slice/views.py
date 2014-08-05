@@ -34,16 +34,15 @@ def create(request, proj_id):
     #<UT>
     from expedient.clearinghouse.users.models import UserProfile
     user_credentials = UserProfile.get_or_create_profile(request.user).credentials
-    #print str(user_credentials)
-
 
     def pre_save(instance, created):
         instance.project = project
         instance.owner = request.user
         #Generate UUID: fixes caching problem on model default value
         instance.uuid = uuid.uuid4()
+
         #<UT>
-        print "--------------------"
+        #print "--------------------"
         code, values, output = create_slice(slice_name=instance.name, slice_desc=instance.description, user_credentials=user_credentials)
         if code == 0 and 'SLICE_CREDENTIAL' in values:
             instance.credentials = values.SLICE_CREDENTIAL

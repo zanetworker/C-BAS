@@ -115,8 +115,10 @@ class OSliceAuthorityResourceManager(object):
         """
 
         u_c = None
-        credentials_testing = self._resource_manager_tools.read_file(OSliceAuthorityResourceManager.KEY_PATH + "credentials_test")
-        root = ET.fromstring(credentials_testing)
+        #credentials_testing = credentials #self._resource_manager_tools.read_file(OSliceAuthorityResourceManager.KEY_PATH + "credentials_test")
+        root = ET.fromstring(credentials)
+
+        #print credentials
 
         self._resource_manager_tools.validate_credentials(credentials)
         config = pm.getService('config')
@@ -131,12 +133,14 @@ class OSliceAuthorityResourceManager(object):
         #Generating Slice Credentials
         s_c, s_pu, s_pr = geniutil.create_certificate(fields['SLICE_URN'], self._sa_pr, self._sa_c)
 
-        #use the user credentials
+        #default owner is slice itself
+        u_c = s_c
+
+        #Try to get the user credentials for use as owner
         for child in root:
             if child.tag == 'credential':
                 u_c = child[2].text
-            else:
-                u_c = s_c
+                break
 
         fields['SLICE_CREDENTIALS'] = geniutil.create_credential(u_c, s_c, self._sa_pr, self._sa_c, "slice",
                                                 OSliceAuthorityResourceManager.CRED_EXPIRY)
