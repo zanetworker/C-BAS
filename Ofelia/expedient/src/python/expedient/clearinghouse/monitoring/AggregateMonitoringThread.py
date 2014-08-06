@@ -18,6 +18,7 @@ class AggregateMonitoringThread(Thread):
     '''
     def __updateAggregateStatus(self, aggregate):
 	print "MONITORING >>>> " + aggregate.name
+    '''
         try:
             agg = aggregate.as_leaf_class()
             agg_xmlrpc_server = "https://" + agg.client.username + ":" + agg.client.password + "@" + agg.client.url[8:]
@@ -47,9 +48,9 @@ class AggregateMonitoringThread(Thread):
             #aggregate.save(permittee_kw = user.first_name)
             print "Aggregate " + aggregate.name + " is DEAD!"
             aggregate.straightSave()
-    
+
     @staticmethod
-    def monitorAggregateInNewThread(param):
+    def monitor2imstAggregateInNewThread(param):
         thread = AggregateMonitoringThread()	
         thread.startMethod(param)
         return thread
@@ -61,3 +62,4 @@ class AggregateMonitoringThread(Thread):
 
     def run(self):	
         self.__method(self.__param)			
+    '''

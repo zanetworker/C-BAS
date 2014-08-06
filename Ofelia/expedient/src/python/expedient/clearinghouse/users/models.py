@@ -20,7 +20,7 @@ class UserProfile(models.Model):
     user                   = models.ForeignKey(User, unique=True)
     affiliation            = models.CharField(max_length=100, default="")
     #<UT>
-    credentials            = models.CharField(max_length=10000, default="")
+    credentials            = models.TextField(max_length=10000, default="")
 
     def __unicode__(self):
         try:
