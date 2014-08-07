@@ -14,7 +14,7 @@ before_script:
   - "cp Ohouse/deploy/config.json.example Ohouse/deploy/config.json"
   - "cp Ohouse/deploy/registry.json.example Ohouse/deploy/registry.json"
   - "cp Ohouse/deploy/supplementary_fields.json.example Ohouse/deploy/supplementary_fields.json"
-  - "./Ohouse/test/creds/gen-certs.sh"
+  - "cd Ohouse && ./Ohouse/test/creds/gen-certs.sh && cd .."
   - "python Ohouse/src/main.py &"
   - "sleep 5"
 # run Python unit tests
