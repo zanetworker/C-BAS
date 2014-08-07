@@ -118,7 +118,9 @@ class OSliceAuthorityResourceManager(object):
         #credentials_testing = credentials #self._resource_manager_tools.read_file(OSliceAuthorityResourceManager.KEY_PATH + "credentials_test")
         root = ET.fromstring(credentials)
 
+        #print '-->'
         #print credentials
+        #print '<--'
 
         self._resource_manager_tools.validate_credentials(credentials)
         config = pm.getService('config')
