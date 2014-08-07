@@ -493,3 +493,32 @@ GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were ma
 2014-08-07 14:44:06,509 [INFO] - [pluginmanager] loading worker
 2014-08-07 14:44:06,528 [INFO] - [pluginmanager] registering service worker
 2014-08-07 14:44:06,529 [INFO] - [pluginmanager] loading flaskrpcs
+2014-08-07 14:44:13,887 [INFO] - [pluginmanager] registering service rpcserver
+2014-08-07 14:44:13,888 [INFO] - [pluginmanager] registering service xmlrpc
+2014-08-07 14:44:13,888 [INFO] - [pluginmanager] loading geni_trust
+2014-08-07 14:44:14,489 [INFO] - [pluginmanager] registering service geniutil
+2014-08-07 14:44:14,489 [INFO] - [pluginmanager] loading omemberauthorityrm
+2014-08-07 14:44:14,492 [INFO] - [pluginmanager] registering service omemberauthorityrm
+2014-08-07 14:44:14,493 [INFO] - [pluginmanager] registering service omemberauthorityexceptions
+2014-08-07 14:44:14,493 [INFO] - [pluginmanager] loading fedrpc1
+2014-08-07 14:44:14,495 [INFO] - [pluginmanager] registering service gfedv1exceptions
+2014-08-07 14:44:14,496 [INFO] - [pluginmanager] registering service gregistryv1handler
+2014-08-07 14:44:14,496 [INFO] - [pluginmanager] registering service gregistryv1delegatebase
+2014-08-07 14:44:14,497 [INFO] - [pluginmanager] registering service gmav1handler
+2014-08-07 14:44:14,498 [INFO] - [pluginmanager] registering service gmav1delegatebase
+2014-08-07 14:44:14,499 [INFO] - [pluginmanager] registering service gsav1handler
+2014-08-07 14:44:14,499 [INFO] - [pluginmanager] registering service gsav1delegatebase
+2014-08-07 14:44:14,500 [INFO] - [pluginmanager] loading ofed1
+2014-08-07 14:44:14,506 [INFO] - [pluginmanager] loading registration
+2014-08-07 14:44:14,530 [INFO] - [pluginmanager] registering service registration
+2014-08-07 14:44:14,531 [INFO] - [pluginmanager] loading configrpc
+2014-08-07 14:44:14,532 [INFO] - [pluginmanager] loading fedrpc2
+2014-08-07 14:44:14,534 [INFO] - [pluginmanager] registering service gregistryv2handler
+2014-08-07 14:44:14,535 [INFO] - [pluginmanager] registering service gregistryv2delegatebase
+2014-08-07 14:44:14,536 [INFO] - [pluginmanager] registering service gmav2handler
+2014-08-07 14:44:14,536 [INFO] - [pluginmanager] registering service gmav2delegatebase
+2014-08-07 14:44:14,537 [INFO] - [pluginmanager] registering service gsav2handler
+2014-08-07 14:44:14,538 [INFO] - [pluginmanager] registering service gsav2delegatebase
+2014-08-07 14:44:14,539 [INFO] - [pluginmanager] loading ofed2
+2014-08-07 14:44:14,554 [INFO] - [pluginmanager] done loading plugins
+2014-08-07 14:44:14,562 [INFO] - [flaskrpcs] registering app server at 0.0.0.0:8001
