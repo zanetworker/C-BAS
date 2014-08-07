@@ -11,17 +11,18 @@ install:
   - "pip install -r Ohouse/requirements.txt"
 # setup environment and start Ohouse
 before_script:
-  - "cp Ohouse/deploy/config.json.example Ohouse/deploy/config.json"
-  - "cp Ohouse/deploy/registry.json.example Ohouse/deploy/registry.json"
-  - "cp Ohouse/deploy/supplementary_fields.json.example Ohouse/deploy/supplementary_fields.json"
-  - "cd Ohouse && ./Ohouse/test/creds/gen-certs.sh && cd .."
-  - "python Ohouse/src/main.py &"
+  - "cd Ohouse"
+  - "cp deploy/config.json.example deploy/config.json"
+  - "cp deploy/registry.json.example deploy/registry.json"
+  - "cp deploy/supplementary_fields.json.example deploy/supplementary_fields.json"
+  - "./test/creds/gen-certs.sh"
+  - "python src/main.py &"
   - "sleep 5"
 # run Python unit tests
 script:
-  - "python Ohouse/test/unit/v2/reg_tests.py"
-#  - "python Ohouse/test/unit/v2/sa_tests.py"
-  - "python Ohouse/test/unit/v2/ma_tests.py"
+  - "python test/unit/v2/reg_tests.py"
+#  - "python test/unit/v2/sa_tests.py"
+  - "python test/unit/v2/ma_tests.py"
 # notify result of build to email address
 notifications:
   email:
