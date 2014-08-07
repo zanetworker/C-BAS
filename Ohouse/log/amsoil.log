@@ -522,3 +522,156 @@ GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were ma
 2014-08-07 14:44:14,539 [INFO] - [pluginmanager] loading ofed2
 2014-08-07 14:44:14,554 [INFO] - [pluginmanager] done loading plugins
 2014-08-07 14:44:14,562 [INFO] - [flaskrpcs] registering app server at 0.0.0.0:8001
+2014-08-07 14:53:46,422 [INFO] - Logging initialized
+2014-08-07 14:53:46,426 [INFO] - [pluginmanager] loading mailer
+2014-08-07 14:53:46,446 [INFO] - [pluginmanager] registering service mailer
+2014-08-07 14:53:46,446 [INFO] - [pluginmanager] loading mongodb
+2014-08-07 14:53:46,491 [INFO] - [pluginmanager] registering service mongodb
+2014-08-07 14:53:46,492 [INFO] - [pluginmanager] loading configdb
+2014-08-07 14:53:46,644 [INFO] - [pluginmanager] registering service config
+2014-08-07 14:53:46,644 [INFO] - [pluginmanager] registering service configexceptions
+2014-08-07 14:53:46,644 [INFO] - [pluginmanager] loading schedule
+2014-08-07 14:53:46,659 [INFO] - [pluginmanager] registering service schedule
+2014-08-07 14:53:46,659 [INFO] - [pluginmanager] registering service scheduleexceptions
+2014-08-07 14:53:46,659 [INFO] - [pluginmanager] loading fedtools
+2014-08-07 14:53:46,744 [INFO] - [pluginmanager] registering service apiexceptionsv1
+2014-08-07 14:53:46,744 [INFO] - [pluginmanager] registering service apiexceptionsv2
+2014-08-07 14:53:46,744 [INFO] - [pluginmanager] registering service apitools
+2014-08-07 14:53:46,745 [INFO] - [pluginmanager] registering service resourcemanagertools
+2014-08-07 14:53:46,765 [INFO] - [pluginmanager] registering service delegatetools
+2014-08-07 14:53:46,766 [INFO] - [pluginmanager] loading oregistryrm
+2014-08-07 14:53:46,767 [INFO] - [pluginmanager] registering service oregistryrm
+2014-08-07 14:53:46,767 [INFO] - [pluginmanager] registering service oregistryexceptions
+2014-08-07 14:53:46,767 [INFO] - [pluginmanager] loading osliceauthorityrm
+2014-08-07 14:53:46,775 [INFO] - [pluginmanager] registering service osliceauthorityrm
+2014-08-07 14:53:46,775 [INFO] - [pluginmanager] registering service osliceauthorityexceptions
+2014-08-07 14:53:46,775 [INFO] - [pluginmanager] loading worker
+2014-08-07 14:53:46,789 [INFO] - [pluginmanager] registering service worker
+2014-08-07 14:53:46,789 [INFO] - [pluginmanager] loading flaskrpcs
+2014-08-07 14:53:52,781 [INFO] - [pluginmanager] registering service rpcserver
+2014-08-07 14:53:52,781 [INFO] - [pluginmanager] registering service xmlrpc
+2014-08-07 14:53:52,781 [INFO] - [pluginmanager] loading geni_trust
+2014-08-07 14:53:52,826 [INFO] - [pluginmanager] registering service geniutil
+2014-08-07 14:53:52,826 [INFO] - [pluginmanager] loading omemberauthorityrm
+2014-08-07 14:53:52,829 [INFO] - [pluginmanager] registering service omemberauthorityrm
+2014-08-07 14:53:52,829 [INFO] - [pluginmanager] registering service omemberauthorityexceptions
+2014-08-07 14:53:52,829 [INFO] - [pluginmanager] loading fedrpc1
+2014-08-07 14:53:52,832 [INFO] - [pluginmanager] registering service gfedv1exceptions
+2014-08-07 14:53:52,832 [INFO] - [pluginmanager] registering service gregistryv1handler
+2014-08-07 14:53:52,832 [INFO] - [pluginmanager] registering service gregistryv1delegatebase
+2014-08-07 14:53:52,833 [INFO] - [pluginmanager] registering service gmav1handler
+2014-08-07 14:53:52,833 [INFO] - [pluginmanager] registering service gmav1delegatebase
+2014-08-07 14:53:52,834 [INFO] - [pluginmanager] registering service gsav1handler
+2014-08-07 14:53:52,834 [INFO] - [pluginmanager] registering service gsav1delegatebase
+2014-08-07 14:53:52,835 [INFO] - [pluginmanager] loading ofed1
+2014-08-07 14:53:52,839 [INFO] - [pluginmanager] loading registration
+2014-08-07 14:53:52,843 [INFO] - [pluginmanager] registering service registration
+2014-08-07 14:53:52,844 [INFO] - [pluginmanager] loading configrpc
+2014-08-07 14:53:52,845 [INFO] - [pluginmanager] loading fedrpc2
+2014-08-07 14:53:52,847 [INFO] - [pluginmanager] registering service gregistryv2handler
+2014-08-07 14:53:52,847 [INFO] - [pluginmanager] registering service gregistryv2delegatebase
+2014-08-07 14:53:52,848 [INFO] - [pluginmanager] registering service gmav2handler
+2014-08-07 14:53:52,848 [INFO] - [pluginmanager] registering service gmav2delegatebase
+2014-08-07 14:53:52,849 [INFO] - [pluginmanager] registering service gsav2handler
+2014-08-07 14:53:52,849 [INFO] - [pluginmanager] registering service gsav2delegatebase
+2014-08-07 14:53:52,850 [INFO] - [pluginmanager] loading ofed2
+2014-08-07 14:53:52,856 [INFO] - [pluginmanager] done loading plugins
+2014-08-07 14:53:52,865 [INFO] - [flaskrpcs] registering app server at 0.0.0.0:8001
+2014-08-07 14:53:52,917 [INFO] - Logging initialized
+2014-08-07 14:53:52,921 [INFO] - [pluginmanager] loading mailer
+2014-08-07 14:53:52,940 [INFO] - [pluginmanager] registering service mailer
+2014-08-07 14:53:52,940 [INFO] - [pluginmanager] loading mongodb
+2014-08-07 14:53:52,985 [INFO] - [pluginmanager] registering service mongodb
+2014-08-07 14:53:52,986 [INFO] - [pluginmanager] loading configdb
+2014-08-07 14:53:53,213 [INFO] - [pluginmanager] registering service config
+2014-08-07 14:53:53,213 [INFO] - [pluginmanager] registering service configexceptions
+2014-08-07 14:53:53,213 [INFO] - [pluginmanager] loading schedule
+2014-08-07 14:53:53,234 [INFO] - [pluginmanager] registering service schedule
+2014-08-07 14:53:53,234 [INFO] - [pluginmanager] registering service scheduleexceptions
+2014-08-07 14:53:53,235 [INFO] - [pluginmanager] loading fedtools
+2014-08-07 14:53:53,360 [INFO] - [pluginmanager] registering service apiexceptionsv1
+2014-08-07 14:53:53,360 [INFO] - [pluginmanager] registering service apiexceptionsv2
+2014-08-07 14:53:53,360 [INFO] - [pluginmanager] registering service apitools
+2014-08-07 14:53:53,361 [INFO] - [pluginmanager] registering service resourcemanagertools
+2014-08-07 14:53:53,392 [INFO] - [pluginmanager] registering service delegatetools
+2014-08-07 14:53:53,392 [INFO] - [pluginmanager] loading oregistryrm
+2014-08-07 14:53:53,394 [INFO] - [pluginmanager] registering service oregistryrm
+2014-08-07 14:53:53,395 [INFO] - [pluginmanager] registering service oregistryexceptions
+2014-08-07 14:53:53,395 [INFO] - [pluginmanager] loading osliceauthorityrm
+2014-08-07 14:53:53,406 [INFO] - [pluginmanager] registering service osliceauthorityrm
+2014-08-07 14:53:53,406 [INFO] - [pluginmanager] registering service osliceauthorityexceptions
+2014-08-07 14:53:53,406 [INFO] - [pluginmanager] loading worker
+2014-08-07 14:53:53,426 [INFO] - [pluginmanager] registering service worker
+2014-08-07 14:53:53,482 [INFO] - [pluginmanager] loading flaskrpcs
+2014-08-07 14:53:59,512 [INFO] - [pluginmanager] registering service rpcserver
+2014-08-07 14:53:59,512 [INFO] - [pluginmanager] registering service xmlrpc
+2014-08-07 14:53:59,512 [INFO] - [pluginmanager] loading geni_trust
+2014-08-07 14:53:59,561 [INFO] - [pluginmanager] registering service geniutil
+2014-08-07 14:53:59,561 [INFO] - [pluginmanager] loading omemberauthorityrm
+2014-08-07 14:53:59,564 [INFO] - [pluginmanager] registering service omemberauthorityrm
+2014-08-07 14:53:59,565 [INFO] - [pluginmanager] registering service omemberauthorityexceptions
+2014-08-07 14:53:59,565 [INFO] - [pluginmanager] loading fedrpc1
+2014-08-07 14:53:59,567 [INFO] - [pluginmanager] registering service gfedv1exceptions
+2014-08-07 14:53:59,567 [INFO] - [pluginmanager] registering service gregistryv1handler
+2014-08-07 14:53:59,567 [INFO] - [pluginmanager] registering service gregistryv1delegatebase
+2014-08-07 14:53:59,568 [INFO] - [pluginmanager] registering service gmav1handler
+2014-08-07 14:53:59,590 [INFO] - [pluginmanager] registering service gmav1delegatebase
+2014-08-07 14:53:59,591 [INFO] - [pluginmanager] registering service gsav1handler
+2014-08-07 14:53:59,591 [INFO] - [pluginmanager] registering service gsav1delegatebase
+2014-08-07 14:53:59,592 [INFO] - [pluginmanager] loading ofed1
+2014-08-07 14:53:59,597 [INFO] - [pluginmanager] loading registration
+2014-08-07 14:53:59,601 [INFO] - [pluginmanager] registering service registration
+2014-08-07 14:53:59,601 [INFO] - [pluginmanager] loading configrpc
+2014-08-07 14:53:59,602 [INFO] - [pluginmanager] loading fedrpc2
+2014-08-07 14:53:59,604 [INFO] - [pluginmanager] registering service gregistryv2handler
+2014-08-07 14:53:59,604 [INFO] - [pluginmanager] registering service gregistryv2delegatebase
+2014-08-07 14:53:59,605 [INFO] - [pluginmanager] registering service gmav2handler
+2014-08-07 14:53:59,605 [INFO] - [pluginmanager] registering service gmav2delegatebase
+2014-08-07 14:53:59,606 [INFO] - [pluginmanager] registering service gsav2handler
+2014-08-07 14:53:59,606 [INFO] - [pluginmanager] registering service gsav2delegatebase
+2014-08-07 14:53:59,607 [INFO] - [pluginmanager] loading ofed2
+2014-08-07 14:53:59,614 [INFO] - [pluginmanager] done loading plugins
+2014-08-07 14:53:59,623 [INFO] - [flaskrpcs] registering app server at 0.0.0.0:8001
+2014-08-07 14:54:08,890 [INFO] - [gmarpc] Called: <get_version>
+2014-08-07 14:54:08,908 [INFO] - [gmarpc] Called: <create>
+2014-08-07 14:54:08,908 [ERROR] - [gmarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when creating an object : KEY_ID)
+2014-08-07 14:54:08,916 [ERROR] - [gmarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gmavtwo.py", line 61, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/omavtwodelegate.py", line 45, in create
+    self._delegate_tools.object_creation_check(fields, self._key_whitelist)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 328, in object_creation_check
+    ', '.join(whitelist))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when creating an object : KEY_ID)
+
+2014-08-07 14:54:08,924 [INFO] - [gmarpc] Called: <get_version>
+2014-08-07 14:54:08,941 [INFO] - [gmarpc] Called: <create>
+2014-08-07 14:54:08,959 [INFO] - [gmarpc] Called: <update>
+2014-08-07 14:54:08,969 [INFO] - [gmarpc] Called: <lookup>
+2014-08-07 14:54:08,979 [INFO] - [gmarpc] Called: <delete>
+2014-08-07 14:54:08,989 [INFO] - [gmarpc] Called: <lookup>
+2014-08-07 14:54:09,000 [INFO] - [gmarpc] Called: <create>
+2014-08-07 14:54:09,000 [ERROR] - [gmarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Field {KEY_MEMBER : True} is not of type URN)
+2014-08-07 14:54:09,000 [ERROR] - [gmarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gmavtwo.py", line 61, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/omavtwodelegate.py", line 46, in create
+    self._delegate_tools.object_consistency_check(type_, fields)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 373, in object_consistency_check
+    raise GFedv2ArgumentError('Field {' + key + ' : ' + str(value) + '} is not of type ' + field_type)
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Field {KEY_MEMBER : True} is not of type URN)
+
+2014-08-07 14:54:09,009 [INFO] - [gmarpc] Called: <create>
+2014-08-07 14:54:09,019 [INFO] - [gmarpc] Called: <update>
+2014-08-07 14:54:09,020 [ERROR] - [gmarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when updating an object : KEY_TYPE)
+2014-08-07 14:54:09,020 [ERROR] - [gmarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gmavtwo.py", line 77, in update
+    result = self._delegate.update(type_, urn, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/omavtwodelegate.py", line 62, in update
+    self._delegate_tools.object_update_check(fields, self._key_whitelist)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 346, in object_update_check
+    raise GFedv2ArgumentError('Cannot pass the following key(s) when updating an object : ' + ', '.join(whitelist))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when updating an object : KEY_TYPE)
+
+2014-08-07 14:54:09,029 [INFO] - [gmarpc] Called: <delete>
+2014-08-07 14:54:09,040 [INFO] - [gmarpc] Called: <lookup>
