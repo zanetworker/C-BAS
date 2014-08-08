@@ -675,3 +675,1754 @@ GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were ma
 
 2014-08-07 14:54:09,029 [INFO] - [gmarpc] Called: <delete>
 2014-08-07 14:54:09,040 [INFO] - [gmarpc] Called: <lookup>
+2014-08-07 16:23:19,800 [INFO] - [gsarpc] Called: <get_version>
+2014-08-07 16:23:20,079 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:20,079 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when creating an object : SLICE_EXPIRED)
+2014-08-07 16:23:20,093 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 46, in create
+    self._delegate_tools.object_creation_check(fields, self._slice_whitelist)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 328, in object_creation_check
+    ', '.join(whitelist))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when creating an object : SLICE_EXPIRED)
+
+2014-08-07 16:23:20,104 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:20,127 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:20,463 [ERROR] - [gsarpc] [DUPLICATE_ERROR] An error indicating attempt to create an object that already exists (insertDocument :: caused by :: 11000 E11000 duplicate key error index: ohouse.sa.$PROJECT_URN_1  dup key: { : "urn:publicid+IDN+0.0.0.0+project+TEST-SLICE-CREDENTIALS" })
+2014-08-07 16:23:20,482 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 57, in create
+    return self._slice_authority_resource_manager.create_project(certificate, credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/osliceauthorityrm/osliceauthorityresourcemanager.py", line 209, in create_project
+    return self._resource_manager_tools.object_create(self.AUTHORITY_NAME, fields, 'project')
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/resourcemanagertools.py", line 133, in object_create
+    raise GFedv2DuplicateError(str(e))
+GFedv2DuplicateError: [DUPLICATE_ERROR] An error indicating attempt to create an object that already exists (insertDocument :: caused by :: 11000 E11000 duplicate key error index: ohouse.sa.$PROJECT_URN_1  dup key: { : "urn:publicid+IDN+0.0.0.0+project+TEST-SLICE-CREDENTIALS" })
+
+2014-08-07 16:23:20,490 [INFO] - [gsarpc] Called: <get_version>
+2014-08-07 16:23:20,508 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:20,509 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:23:20,509 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:23:20,520 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:20,529 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:20,529 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:23:20,530 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:23:20,538 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:20,547 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:20,547 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:23:20,548 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:23:20,557 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:20,567 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:20,567 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:23:20,567 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:23:20,575 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:20,584 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:20,584 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:23:20,584 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:23:20,594 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:20,603 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:20,604 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:23:20,604 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:23:20,612 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:20,622 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:20,622 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:23:20,623 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:23:20,631 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:20,640 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:20,640 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:23:20,640 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:23:20,648 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:20,658 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:20,659 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:23:20,659 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:23:20,667 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:20,676 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:20,676 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:23:20,676 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:23:20,685 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:20,694 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:20,695 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:23:20,695 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:23:20,703 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:20,713 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:20,713 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:23:20,713 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:23:20,722 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:20,731 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:20,732 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:23:20,732 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:23:20,740 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:20,750 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:20,759 [ERROR] - [gsarpc] [SERVER_ERROR] An error in the client/server connection (must be string or read-only buffer, not list)
+2014-08-07 16:23:20,768 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 49, in create
+    return self._slice_authority_resource_manager.create_slice(certificate, credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/osliceauthorityrm/osliceauthorityresourcemanager.py", line 119, in create_slice
+    root = ET.fromstring(credentials)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1301, in XML
+    parser.feed(text)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1641, in feed
+    self._parser.Parse(data, 0)
+TypeError: must be string or read-only buffer, not list
+
+2014-08-07 16:23:20,777 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:20,778 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Field {SLICE_NAME : True} is not of type STRING)
+2014-08-07 16:23:20,778 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 47, in create
+    self._delegate_tools.object_consistency_check(type_, fields)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 373, in object_consistency_check
+    raise GFedv2ArgumentError('Field {' + key + ' : ' + str(value) + '} is not of type ' + field_type)
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Field {SLICE_NAME : True} is not of type STRING)
+
+2014-08-07 16:23:20,787 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:20,796 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:23:20,796 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Member key to modify not of required type. Offending key is: PROJECT_MEMBER. Should be one of these types: ['SLICE_MEMBER', 'SLICE_ROLE'])
+2014-08-07 16:23:20,796 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 122, in modify_membership
+    result = self._delegate.modify_membership(type_, urn, self.requestCertificate(), credentials, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 158, in modify_membership
+    self._delegate_tools.member_check(['SLICE_MEMBER', 'SLICE_ROLE'],options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 295, in member_check
+    str(required_field_keys))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Member key to modify not of required type. Offending key is: PROJECT_MEMBER. Should be one of these types: ['SLICE_MEMBER', 'SLICE_ROLE'])
+
+2014-08-07 16:23:20,805 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:20,836 [INFO] - [gsarpc] Called: <update>
+2014-08-07 16:23:20,902 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:20,912 [INFO] - [gsarpc] Called: <delete>
+2014-08-07 16:23:20,922 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:20,931 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:23:20,941 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-07 16:23:20,951 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:23:20,959 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-07 16:23:20,970 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:23:20,979 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-07 16:23:20,987 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:23:20,997 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-07 16:23:21,006 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:23:21,021 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-07 16:23:21,032 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:23:21,041 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-07 16:23:21,049 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:21,059 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:21,060 [ERROR] - [gsarpc] [SERVER_ERROR] An error in the client/server connection (must be string or read-only buffer, not list)
+2014-08-07 16:23:21,060 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 49, in create
+    return self._slice_authority_resource_manager.create_slice(certificate, credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/osliceauthorityrm/osliceauthorityresourcemanager.py", line 119, in create_slice
+    root = ET.fromstring(credentials)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1301, in XML
+    parser.feed(text)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1641, in feed
+    self._parser.Parse(data, 0)
+TypeError: must be string or read-only buffer, not list
+
+2014-08-07 16:23:21,068 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:23:21,089 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-07 16:23:21,099 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:23:21,107 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-07 16:23:21,116 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:23:21,135 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-07 16:23:21,144 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:23:21,154 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-07 16:23:21,163 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:23:21,172 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-07 16:23:21,181 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:23:21,191 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-07 16:23:21,200 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:21,211 [INFO] - [gsarpc] Called: <update>
+2014-08-07 16:23:21,221 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:21,230 [INFO] - [gsarpc] Called: <delete>
+2014-08-07 16:23:21,244 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:21,253 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:21,265 [INFO] - [gsarpc] Called: <update>
+2014-08-07 16:23:21,266 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Invalid expiry date for object type: PROJECT)
+2014-08-07 16:23:21,267 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 79, in update
+    result = self._delegate.update(type_, urn, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 105, in update
+    raise gfed_ex.GFedv2ArgumentError("Invalid expiry date for object type: " + str(type_))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Invalid expiry date for object type: PROJECT)
+
+2014-08-07 16:23:21,276 [INFO] - [gsarpc] Called: <delete>
+2014-08-07 16:23:21,285 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:23:21,294 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:23:21,307 [INFO] - [gsarpc] Called: <update>
+2014-08-07 16:23:21,307 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when updating an object : PROJECT_NAME)
+2014-08-07 16:23:21,307 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 79, in update
+    result = self._delegate.update(type_, urn, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 107, in update
+    self._delegate_tools.object_update_check(fields, self._project_whitelist)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 346, in object_update_check
+    raise GFedv2ArgumentError('Cannot pass the following key(s) when updating an object : ' + ', '.join(whitelist))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when updating an object : PROJECT_NAME)
+
+2014-08-07 16:23:21,315 [INFO] - [gsarpc] Called: <delete>
+2014-08-07 16:23:21,324 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,354 [INFO] - [gsarpc] Called: <get_version>
+2014-08-07 16:26:42,369 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,370 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when creating an object : SLICE_EXPIRED)
+2014-08-07 16:26:42,370 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 46, in create
+    self._delegate_tools.object_creation_check(fields, self._slice_whitelist)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 328, in object_creation_check
+    ', '.join(whitelist))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when creating an object : SLICE_EXPIRED)
+
+2014-08-07 16:26:42,379 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,389 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,402 [INFO] - [gsarpc] Called: <get_credentials>
+2014-08-07 16:26:42,402 [ERROR] - [gsarpc] [NOT_IMPLEMENTED_ERROR] The given method is not implemented on the server. (Method not implemented)
+2014-08-07 16:26:42,402 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 158, in get_credentials
+    result = self._delegate.get_credentials(slice_urn,  credentials, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 297, in get_credentials
+    raise GFedv2NotImplementedError("Method not implemented")
+GFedv2NotImplementedError: [NOT_IMPLEMENTED_ERROR] The given method is not implemented on the server. (Method not implemented)
+
+2014-08-07 16:26:42,410 [INFO] - [gsarpc] Called: <get_version>
+2014-08-07 16:26:42,426 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,426 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:26:42,427 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:26:42,436 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,446 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,446 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:26:42,446 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:26:42,455 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,466 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,466 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:26:42,466 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:26:42,475 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,485 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,485 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:26:42,485 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:26:42,495 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,506 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,506 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:26:42,506 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:26:42,515 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,524 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,524 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:26:42,525 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:26:42,533 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,543 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,543 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:26:42,543 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:26:42,551 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,564 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,564 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:26:42,564 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:26:42,574 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,585 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,586 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:26:42,586 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:26:42,597 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,608 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,609 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:26:42,609 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:26:42,621 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,633 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,633 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:26:42,634 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:26:42,643 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,655 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,655 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:26:42,656 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:26:42,666 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,677 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,678 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-07 16:26:42,678 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-07 16:26:42,689 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,700 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,700 [ERROR] - [gsarpc] [SERVER_ERROR] An error in the client/server connection (must be string or read-only buffer, not list)
+2014-08-07 16:26:42,701 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 49, in create
+    return self._slice_authority_resource_manager.create_slice(certificate, credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/osliceauthorityrm/osliceauthorityresourcemanager.py", line 119, in create_slice
+    root = ET.fromstring(credentials)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1301, in XML
+    parser.feed(text)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1641, in feed
+    self._parser.Parse(data, 0)
+TypeError: must be string or read-only buffer, not list
+
+2014-08-07 16:26:42,712 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,713 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Field {SLICE_NAME : True} is not of type STRING)
+2014-08-07 16:26:42,713 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 47, in create
+    self._delegate_tools.object_consistency_check(type_, fields)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 373, in object_consistency_check
+    raise GFedv2ArgumentError('Field {' + key + ' : ' + str(value) + '} is not of type ' + field_type)
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Field {SLICE_NAME : True} is not of type STRING)
+
+2014-08-07 16:26:42,724 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,735 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:26:42,735 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Member key to modify not of required type. Offending key is: PROJECT_MEMBER. Should be one of these types: ['SLICE_MEMBER', 'SLICE_ROLE'])
+2014-08-07 16:26:42,735 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 122, in modify_membership
+    result = self._delegate.modify_membership(type_, urn, self.requestCertificate(), credentials, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 158, in modify_membership
+    self._delegate_tools.member_check(['SLICE_MEMBER', 'SLICE_ROLE'],options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 295, in member_check
+    str(required_field_keys))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Member key to modify not of required type. Offending key is: PROJECT_MEMBER. Should be one of these types: ['SLICE_MEMBER', 'SLICE_ROLE'])
+
+2014-08-07 16:26:42,746 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,759 [INFO] - [gsarpc] Called: <update>
+2014-08-07 16:26:42,770 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,784 [INFO] - [gsarpc] Called: <delete>
+2014-08-07 16:26:42,795 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,808 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:26:42,817 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-07 16:26:42,828 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:26:42,840 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-07 16:26:42,849 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:26:42,858 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-07 16:26:42,868 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:26:42,876 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-07 16:26:42,886 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:26:42,895 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-07 16:26:42,905 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:26:42,916 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-07 16:26:42,926 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:42,940 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:42,940 [ERROR] - [gsarpc] [SERVER_ERROR] An error in the client/server connection (must be string or read-only buffer, not list)
+2014-08-07 16:26:42,940 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 49, in create
+    return self._slice_authority_resource_manager.create_slice(certificate, credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/osliceauthorityrm/osliceauthorityresourcemanager.py", line 119, in create_slice
+    root = ET.fromstring(credentials)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1301, in XML
+    parser.feed(text)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1641, in feed
+    self._parser.Parse(data, 0)
+TypeError: must be string or read-only buffer, not list
+
+2014-08-07 16:26:42,950 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:26:42,984 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-07 16:26:42,996 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:26:43,004 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-07 16:26:43,013 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:26:43,036 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-07 16:26:43,045 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:26:43,055 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-07 16:26:43,065 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:26:43,078 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-07 16:26:43,091 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-07 16:26:43,103 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-07 16:26:43,115 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:43,127 [INFO] - [gsarpc] Called: <update>
+2014-08-07 16:26:43,139 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:43,152 [INFO] - [gsarpc] Called: <delete>
+2014-08-07 16:26:43,166 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:43,179 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:43,192 [INFO] - [gsarpc] Called: <update>
+2014-08-07 16:26:43,193 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Invalid expiry date for object type: PROJECT)
+2014-08-07 16:26:43,193 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 79, in update
+    result = self._delegate.update(type_, urn, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 105, in update
+    raise gfed_ex.GFedv2ArgumentError("Invalid expiry date for object type: " + str(type_))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Invalid expiry date for object type: PROJECT)
+
+2014-08-07 16:26:43,201 [INFO] - [gsarpc] Called: <delete>
+2014-08-07 16:26:43,211 [INFO] - [gsarpc] Called: <lookup>
+2014-08-07 16:26:43,221 [INFO] - [gsarpc] Called: <create>
+2014-08-07 16:26:43,233 [INFO] - [gsarpc] Called: <update>
+2014-08-07 16:26:43,233 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when updating an object : PROJECT_NAME)
+2014-08-07 16:26:43,234 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 79, in update
+    result = self._delegate.update(type_, urn, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 107, in update
+    self._delegate_tools.object_update_check(fields, self._project_whitelist)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 346, in object_update_check
+    raise GFedv2ArgumentError('Cannot pass the following key(s) when updating an object : ' + ', '.join(whitelist))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when updating an object : PROJECT_NAME)
+
+2014-08-07 16:26:43,241 [INFO] - [gsarpc] Called: <delete>
+2014-08-07 16:26:43,250 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 11:31:37,353 [INFO] - Logging initialized
+2014-08-08 11:31:37,470 [INFO] - [pluginmanager] loading mailer
+2014-08-08 11:31:37,509 [INFO] - [pluginmanager] registering service mailer
+2014-08-08 11:31:37,510 [INFO] - [pluginmanager] loading mongodb
+2014-08-08 11:31:37,822 [INFO] - [pluginmanager] registering service mongodb
+2014-08-08 11:31:37,822 [INFO] - [pluginmanager] loading configdb
+2014-08-08 11:31:38,694 [INFO] - [pluginmanager] registering service config
+2014-08-08 11:31:38,695 [INFO] - [pluginmanager] registering service configexceptions
+2014-08-08 11:31:38,695 [INFO] - [pluginmanager] loading schedule
+2014-08-08 11:31:38,715 [INFO] - [pluginmanager] registering service schedule
+2014-08-08 11:31:38,715 [INFO] - [pluginmanager] registering service scheduleexceptions
+2014-08-08 11:31:38,716 [INFO] - [pluginmanager] loading fedtools
+2014-08-08 11:31:39,320 [INFO] - [pluginmanager] registering service apiexceptionsv1
+2014-08-08 11:31:39,321 [INFO] - [pluginmanager] registering service apiexceptionsv2
+2014-08-08 11:31:39,321 [INFO] - [pluginmanager] registering service apitools
+2014-08-08 11:31:39,321 [INFO] - [pluginmanager] registering service resourcemanagertools
+2014-08-08 11:31:39,357 [INFO] - [pluginmanager] registering service delegatetools
+2014-08-08 11:31:39,357 [INFO] - [pluginmanager] loading oregistryrm
+2014-08-08 11:31:39,365 [INFO] - [pluginmanager] registering service oregistryrm
+2014-08-08 11:31:39,365 [INFO] - [pluginmanager] registering service oregistryexceptions
+2014-08-08 11:31:39,366 [INFO] - [pluginmanager] loading osliceauthorityrm
+2014-08-08 11:31:39,440 [INFO] - [pluginmanager] registering service osliceauthorityrm
+2014-08-08 11:31:39,440 [INFO] - [pluginmanager] registering service osliceauthorityexceptions
+2014-08-08 11:31:39,440 [INFO] - [pluginmanager] loading worker
+2014-08-08 11:31:39,474 [INFO] - [pluginmanager] registering service worker
+2014-08-08 11:31:39,474 [INFO] - [pluginmanager] loading flaskrpcs
+2014-08-08 11:31:46,167 [INFO] - [pluginmanager] registering service rpcserver
+2014-08-08 11:31:46,168 [INFO] - [pluginmanager] registering service xmlrpc
+2014-08-08 11:31:46,168 [INFO] - [pluginmanager] loading geni_trust
+2014-08-08 11:31:46,452 [INFO] - [pluginmanager] registering service geniutil
+2014-08-08 11:31:46,452 [INFO] - [pluginmanager] loading omemberauthorityrm
+2014-08-08 11:31:46,487 [INFO] - [pluginmanager] registering service omemberauthorityrm
+2014-08-08 11:31:46,488 [INFO] - [pluginmanager] registering service omemberauthorityexceptions
+2014-08-08 11:31:46,488 [INFO] - [pluginmanager] loading fedrpc1
+2014-08-08 11:31:46,501 [INFO] - [pluginmanager] registering service gfedv1exceptions
+2014-08-08 11:31:46,501 [INFO] - [pluginmanager] registering service gregistryv1handler
+2014-08-08 11:31:46,501 [INFO] - [pluginmanager] registering service gregistryv1delegatebase
+2014-08-08 11:31:46,584 [INFO] - [pluginmanager] registering service gmav1handler
+2014-08-08 11:31:46,584 [INFO] - [pluginmanager] registering service gmav1delegatebase
+2014-08-08 11:31:46,585 [INFO] - [pluginmanager] registering service gsav1handler
+2014-08-08 11:31:46,586 [INFO] - [pluginmanager] registering service gsav1delegatebase
+2014-08-08 11:31:46,586 [INFO] - [pluginmanager] loading ofed1
+2014-08-08 11:31:46,594 [INFO] - [pluginmanager] loading registration
+2014-08-08 11:31:46,631 [INFO] - [pluginmanager] registering service registration
+2014-08-08 11:31:46,631 [INFO] - [pluginmanager] loading configrpc
+2014-08-08 11:31:46,635 [INFO] - [pluginmanager] loading fedrpc2
+2014-08-08 11:31:46,646 [INFO] - [pluginmanager] registering service gregistryv2handler
+2014-08-08 11:31:46,646 [INFO] - [pluginmanager] registering service gregistryv2delegatebase
+2014-08-08 11:31:46,648 [INFO] - [pluginmanager] registering service gmav2handler
+2014-08-08 11:31:46,648 [INFO] - [pluginmanager] registering service gmav2delegatebase
+2014-08-08 11:31:46,649 [INFO] - [pluginmanager] registering service gsav2handler
+2014-08-08 11:31:46,649 [INFO] - [pluginmanager] registering service gsav2delegatebase
+2014-08-08 11:31:46,651 [INFO] - [pluginmanager] loading ofed2
+2014-08-08 11:31:46,664 [INFO] - [pluginmanager] done loading plugins
+2014-08-08 11:31:46,676 [INFO] - [flaskrpcs] registering app server at 0.0.0.0:8001
+2014-08-08 15:35:02,839 [INFO] - Logging initialized
+2014-08-08 15:35:02,896 [INFO] - [pluginmanager] loading mailer
+2014-08-08 15:35:02,981 [INFO] - [pluginmanager] registering service mailer
+2014-08-08 15:35:02,981 [INFO] - [pluginmanager] loading mongodb
+2014-08-08 15:35:03,405 [INFO] - [pluginmanager] registering service mongodb
+2014-08-08 15:35:03,406 [INFO] - [pluginmanager] loading configdb
+2014-08-08 15:35:04,037 [INFO] - [pluginmanager] registering service config
+2014-08-08 15:35:04,038 [INFO] - [pluginmanager] registering service configexceptions
+2014-08-08 15:35:04,038 [INFO] - [pluginmanager] loading schedule
+2014-08-08 15:35:04,076 [INFO] - [pluginmanager] registering service schedule
+2014-08-08 15:35:04,076 [INFO] - [pluginmanager] registering service scheduleexceptions
+2014-08-08 15:35:04,076 [INFO] - [pluginmanager] loading fedtools
+2014-08-08 15:35:04,862 [INFO] - [pluginmanager] registering service apiexceptionsv1
+2014-08-08 15:35:04,862 [INFO] - [pluginmanager] registering service apiexceptionsv2
+2014-08-08 15:35:04,862 [INFO] - [pluginmanager] registering service apitools
+2014-08-08 15:35:04,862 [INFO] - [pluginmanager] registering service resourcemanagertools
+2014-08-08 15:35:04,907 [INFO] - [pluginmanager] registering service delegatetools
+2014-08-08 15:35:04,907 [INFO] - [pluginmanager] loading oregistryrm
+2014-08-08 15:35:04,915 [INFO] - [pluginmanager] registering service oregistryrm
+2014-08-08 15:35:04,915 [INFO] - [pluginmanager] registering service oregistryexceptions
+2014-08-08 15:35:04,915 [INFO] - [pluginmanager] loading osliceauthorityrm
+2014-08-08 15:35:05,131 [INFO] - [pluginmanager] registering service osliceauthorityrm
+2014-08-08 15:35:05,132 [INFO] - [pluginmanager] registering service osliceauthorityexceptions
+2014-08-08 15:35:05,132 [INFO] - [pluginmanager] loading worker
+2014-08-08 15:35:05,168 [INFO] - [pluginmanager] registering service worker
+2014-08-08 15:35:05,168 [INFO] - [pluginmanager] loading flaskrpcs
+2014-08-08 15:35:12,463 [INFO] - [pluginmanager] registering service rpcserver
+2014-08-08 15:35:12,472 [INFO] - [pluginmanager] registering service xmlrpc
+2014-08-08 15:35:12,473 [INFO] - [pluginmanager] loading geni_trust
+2014-08-08 15:35:12,857 [INFO] - [pluginmanager] registering service geniutil
+2014-08-08 15:35:12,857 [INFO] - [pluginmanager] loading omemberauthorityrm
+2014-08-08 15:35:12,879 [INFO] - [pluginmanager] registering service omemberauthorityrm
+2014-08-08 15:35:12,879 [INFO] - [pluginmanager] registering service omemberauthorityexceptions
+2014-08-08 15:35:12,879 [INFO] - [pluginmanager] loading fedrpc1
+2014-08-08 15:35:12,886 [INFO] - [pluginmanager] registering service gfedv1exceptions
+2014-08-08 15:35:12,886 [INFO] - [pluginmanager] registering service gregistryv1handler
+2014-08-08 15:35:12,886 [INFO] - [pluginmanager] registering service gregistryv1delegatebase
+2014-08-08 15:35:12,922 [INFO] - [pluginmanager] registering service gmav1handler
+2014-08-08 15:35:12,922 [INFO] - [pluginmanager] registering service gmav1delegatebase
+2014-08-08 15:35:12,924 [INFO] - [pluginmanager] registering service gsav1handler
+2014-08-08 15:35:12,924 [INFO] - [pluginmanager] registering service gsav1delegatebase
+2014-08-08 15:35:12,925 [INFO] - [pluginmanager] loading ofed1
+2014-08-08 15:35:12,938 [INFO] - [pluginmanager] loading registration
+2014-08-08 15:35:12,992 [INFO] - [pluginmanager] registering service registration
+2014-08-08 15:35:12,992 [INFO] - [pluginmanager] loading configrpc
+2014-08-08 15:35:12,997 [INFO] - [pluginmanager] loading fedrpc2
+2014-08-08 15:35:13,006 [INFO] - [pluginmanager] registering service gregistryv2handler
+2014-08-08 15:35:13,006 [INFO] - [pluginmanager] registering service gregistryv2delegatebase
+2014-08-08 15:35:13,008 [INFO] - [pluginmanager] registering service gmav2handler
+2014-08-08 15:35:13,008 [INFO] - [pluginmanager] registering service gmav2delegatebase
+2014-08-08 15:35:13,010 [INFO] - [pluginmanager] registering service gsav2handler
+2014-08-08 15:35:13,010 [INFO] - [pluginmanager] registering service gsav2delegatebase
+2014-08-08 15:35:13,011 [INFO] - [pluginmanager] loading ofed2
+2014-08-08 15:35:13,025 [INFO] - [pluginmanager] done loading plugins
+2014-08-08 16:19:49,419 [INFO] - Logging initialized
+2014-08-08 16:19:49,423 [INFO] - [pluginmanager] loading mailer
+2014-08-08 16:19:49,441 [INFO] - [pluginmanager] registering service mailer
+2014-08-08 16:19:49,441 [INFO] - [pluginmanager] loading mongodb
+2014-08-08 16:19:49,485 [INFO] - [pluginmanager] registering service mongodb
+2014-08-08 16:19:49,486 [INFO] - [pluginmanager] loading configdb
+2014-08-08 16:19:49,630 [INFO] - [pluginmanager] registering service config
+2014-08-08 16:19:49,630 [INFO] - [pluginmanager] registering service configexceptions
+2014-08-08 16:19:49,631 [INFO] - [pluginmanager] loading schedule
+2014-08-08 16:19:49,644 [INFO] - [pluginmanager] registering service schedule
+2014-08-08 16:19:49,644 [INFO] - [pluginmanager] registering service scheduleexceptions
+2014-08-08 16:19:49,644 [INFO] - [pluginmanager] loading fedtools
+2014-08-08 16:19:49,728 [INFO] - [pluginmanager] registering service apiexceptionsv1
+2014-08-08 16:19:49,728 [INFO] - [pluginmanager] registering service apiexceptionsv2
+2014-08-08 16:19:49,729 [INFO] - [pluginmanager] registering service apitools
+2014-08-08 16:19:49,729 [INFO] - [pluginmanager] registering service resourcemanagertools
+2014-08-08 16:19:49,748 [INFO] - [pluginmanager] registering service delegatetools
+2014-08-08 16:19:49,749 [INFO] - [pluginmanager] loading oregistryrm
+2014-08-08 16:19:49,750 [INFO] - [pluginmanager] registering service oregistryrm
+2014-08-08 16:19:49,750 [INFO] - [pluginmanager] registering service oregistryexceptions
+2014-08-08 16:19:49,750 [INFO] - [pluginmanager] loading osliceauthorityrm
+2014-08-08 16:19:49,757 [INFO] - [pluginmanager] registering service osliceauthorityrm
+2014-08-08 16:19:49,757 [INFO] - [pluginmanager] registering service osliceauthorityexceptions
+2014-08-08 16:19:49,757 [INFO] - [pluginmanager] loading worker
+2014-08-08 16:19:49,769 [INFO] - [pluginmanager] registering service worker
+2014-08-08 16:19:49,770 [INFO] - [pluginmanager] loading flaskrpcs
+2014-08-08 16:19:55,750 [INFO] - [pluginmanager] registering service rpcserver
+2014-08-08 16:19:55,750 [INFO] - [pluginmanager] registering service xmlrpc
+2014-08-08 16:19:55,750 [INFO] - [pluginmanager] loading geni_trust
+2014-08-08 16:19:55,795 [INFO] - [pluginmanager] registering service geniutil
+2014-08-08 16:19:55,795 [INFO] - [pluginmanager] loading omemberauthorityrm
+2014-08-08 16:19:55,798 [INFO] - [pluginmanager] registering service omemberauthorityrm
+2014-08-08 16:19:55,798 [INFO] - [pluginmanager] registering service omemberauthorityexceptions
+2014-08-08 16:19:55,799 [INFO] - [pluginmanager] loading fedrpc1
+2014-08-08 16:19:55,801 [INFO] - [pluginmanager] registering service gfedv1exceptions
+2014-08-08 16:19:55,801 [INFO] - [pluginmanager] registering service gregistryv1handler
+2014-08-08 16:19:55,801 [INFO] - [pluginmanager] registering service gregistryv1delegatebase
+2014-08-08 16:19:55,802 [INFO] - [pluginmanager] registering service gmav1handler
+2014-08-08 16:19:55,802 [INFO] - [pluginmanager] registering service gmav1delegatebase
+2014-08-08 16:19:55,803 [INFO] - [pluginmanager] registering service gsav1handler
+2014-08-08 16:19:55,803 [INFO] - [pluginmanager] registering service gsav1delegatebase
+2014-08-08 16:19:55,804 [INFO] - [pluginmanager] loading ofed1
+2014-08-08 16:19:55,808 [INFO] - [pluginmanager] loading registration
+2014-08-08 16:19:55,812 [INFO] - [pluginmanager] registering service registration
+2014-08-08 16:19:55,812 [INFO] - [pluginmanager] loading configrpc
+2014-08-08 16:19:55,813 [INFO] - [pluginmanager] loading fedrpc2
+2014-08-08 16:19:55,815 [INFO] - [pluginmanager] registering service gregistryv2handler
+2014-08-08 16:19:55,815 [INFO] - [pluginmanager] registering service gregistryv2delegatebase
+2014-08-08 16:19:55,816 [INFO] - [pluginmanager] registering service gmav2handler
+2014-08-08 16:19:55,816 [INFO] - [pluginmanager] registering service gmav2delegatebase
+2014-08-08 16:19:55,817 [INFO] - [pluginmanager] registering service gsav2handler
+2014-08-08 16:19:55,817 [INFO] - [pluginmanager] registering service gsav2delegatebase
+2014-08-08 16:19:55,818 [INFO] - [pluginmanager] loading ofed2
+2014-08-08 16:19:55,825 [INFO] - [pluginmanager] done loading plugins
+2014-08-08 16:19:55,833 [INFO] - [flaskrpcs] registering app server at 0.0.0.0:8001
+2014-08-08 16:19:55,956 [INFO] - Logging initialized
+2014-08-08 16:19:55,961 [INFO] - [pluginmanager] loading mailer
+2014-08-08 16:19:55,980 [INFO] - [pluginmanager] registering service mailer
+2014-08-08 16:19:55,980 [INFO] - [pluginmanager] loading mongodb
+2014-08-08 16:19:56,040 [INFO] - [pluginmanager] registering service mongodb
+2014-08-08 16:19:56,040 [INFO] - [pluginmanager] loading configdb
+2014-08-08 16:19:56,206 [INFO] - [pluginmanager] registering service config
+2014-08-08 16:19:56,206 [INFO] - [pluginmanager] registering service configexceptions
+2014-08-08 16:19:56,206 [INFO] - [pluginmanager] loading schedule
+2014-08-08 16:19:56,221 [INFO] - [pluginmanager] registering service schedule
+2014-08-08 16:19:56,221 [INFO] - [pluginmanager] registering service scheduleexceptions
+2014-08-08 16:19:56,221 [INFO] - [pluginmanager] loading fedtools
+2014-08-08 16:19:56,314 [INFO] - [pluginmanager] registering service apiexceptionsv1
+2014-08-08 16:19:56,314 [INFO] - [pluginmanager] registering service apiexceptionsv2
+2014-08-08 16:19:56,314 [INFO] - [pluginmanager] registering service apitools
+2014-08-08 16:19:56,315 [INFO] - [pluginmanager] registering service resourcemanagertools
+2014-08-08 16:19:56,337 [INFO] - [pluginmanager] registering service delegatetools
+2014-08-08 16:19:56,338 [INFO] - [pluginmanager] loading oregistryrm
+2014-08-08 16:19:56,339 [INFO] - [pluginmanager] registering service oregistryrm
+2014-08-08 16:19:56,339 [INFO] - [pluginmanager] registering service oregistryexceptions
+2014-08-08 16:19:56,339 [INFO] - [pluginmanager] loading osliceauthorityrm
+2014-08-08 16:19:56,346 [INFO] - [pluginmanager] registering service osliceauthorityrm
+2014-08-08 16:19:56,346 [INFO] - [pluginmanager] registering service osliceauthorityexceptions
+2014-08-08 16:19:56,347 [INFO] - [pluginmanager] loading worker
+2014-08-08 16:19:56,362 [INFO] - [pluginmanager] registering service worker
+2014-08-08 16:19:56,362 [INFO] - [pluginmanager] loading flaskrpcs
+2014-08-08 16:20:02,401 [INFO] - [pluginmanager] registering service rpcserver
+2014-08-08 16:20:02,401 [INFO] - [pluginmanager] registering service xmlrpc
+2014-08-08 16:20:02,401 [INFO] - [pluginmanager] loading geni_trust
+2014-08-08 16:20:02,446 [INFO] - [pluginmanager] registering service geniutil
+2014-08-08 16:20:02,446 [INFO] - [pluginmanager] loading omemberauthorityrm
+2014-08-08 16:20:02,449 [INFO] - [pluginmanager] registering service omemberauthorityrm
+2014-08-08 16:20:02,449 [INFO] - [pluginmanager] registering service omemberauthorityexceptions
+2014-08-08 16:20:02,449 [INFO] - [pluginmanager] loading fedrpc1
+2014-08-08 16:20:02,451 [INFO] - [pluginmanager] registering service gfedv1exceptions
+2014-08-08 16:20:02,452 [INFO] - [pluginmanager] registering service gregistryv1handler
+2014-08-08 16:20:02,452 [INFO] - [pluginmanager] registering service gregistryv1delegatebase
+2014-08-08 16:20:02,453 [INFO] - [pluginmanager] registering service gmav1handler
+2014-08-08 16:20:02,453 [INFO] - [pluginmanager] registering service gmav1delegatebase
+2014-08-08 16:20:02,454 [INFO] - [pluginmanager] registering service gsav1handler
+2014-08-08 16:20:02,454 [INFO] - [pluginmanager] registering service gsav1delegatebase
+2014-08-08 16:20:02,455 [INFO] - [pluginmanager] loading ofed1
+2014-08-08 16:20:02,459 [INFO] - [pluginmanager] loading registration
+2014-08-08 16:20:02,462 [INFO] - [pluginmanager] registering service registration
+2014-08-08 16:20:02,462 [INFO] - [pluginmanager] loading configrpc
+2014-08-08 16:20:02,465 [INFO] - [pluginmanager] loading fedrpc2
+2014-08-08 16:20:02,466 [INFO] - [pluginmanager] registering service gregistryv2handler
+2014-08-08 16:20:02,467 [INFO] - [pluginmanager] registering service gregistryv2delegatebase
+2014-08-08 16:20:02,468 [INFO] - [pluginmanager] registering service gmav2handler
+2014-08-08 16:20:02,468 [INFO] - [pluginmanager] registering service gmav2delegatebase
+2014-08-08 16:20:02,468 [INFO] - [pluginmanager] registering service gsav2handler
+2014-08-08 16:20:02,469 [INFO] - [pluginmanager] registering service gsav2delegatebase
+2014-08-08 16:20:02,469 [INFO] - [pluginmanager] loading ofed2
+2014-08-08 16:20:02,476 [INFO] - [pluginmanager] done loading plugins
+2014-08-08 16:20:02,483 [INFO] - [flaskrpcs] registering app server at 0.0.0.0:8001
+2014-08-08 16:49:14,771 [INFO] - [gregistryrpc] Called: <get_trust_roots>
+2014-08-08 16:49:14,779 [INFO] - [gregistryrpc] Called: <get_version>
+2014-08-08 16:49:14,792 [INFO] - [gregistryrpc] Called: <lookup>
+2014-08-08 16:49:14,805 [INFO] - [gregistryrpc] Called: <lookup>
+2014-08-08 16:49:14,813 [INFO] - [gregistryrpc] Called: <lookup>
+2014-08-08 16:49:14,821 [INFO] - [gregistryrpc] Called: <lookup>
+2014-08-08 16:49:14,831 [INFO] - [gregistryrpc] Called: <lookup>
+2014-08-08 16:49:14,839 [INFO] - [gregistryrpc] Called: <lookup>
+2014-08-08 16:49:14,848 [INFO] - [gregistryrpc] Called: <lookup>
+2014-08-08 16:49:14,857 [INFO] - [gregistryrpc] Called: <lookup>
+2014-08-08 16:49:14,865 [INFO] - [gregistryrpc] Called: <lookup>
+2014-08-08 16:49:14,872 [INFO] - [gregistryrpc] Called: <lookup>
+2014-08-08 16:49:14,881 [INFO] - [gregistryrpc] Called: <lookup>
+2014-08-08 16:49:14,891 [INFO] - [gregistryrpc] Called: <lookup>
+2014-08-08 16:49:14,900 [INFO] - [gregistryrpc] Called: <lookup_authorities_for_urns>
+2014-08-08 16:49:25,466 [INFO] - [gmarpc] Called: <get_version>
+2014-08-08 16:49:25,568 [INFO] - [gmarpc] Called: <create>
+2014-08-08 16:49:25,568 [ERROR] - [gmarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when creating an object : KEY_ID)
+2014-08-08 16:49:25,586 [ERROR] - [gmarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gmavtwo.py", line 61, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/omavtwodelegate.py", line 45, in create
+    self._delegate_tools.object_creation_check(fields, self._key_whitelist)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 328, in object_creation_check
+    ', '.join(whitelist))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when creating an object : KEY_ID)
+
+2014-08-08 16:49:25,595 [INFO] - [gmarpc] Called: <get_version>
+2014-08-08 16:49:25,610 [INFO] - [gmarpc] Called: <create>
+2014-08-08 16:49:25,622 [INFO] - [gmarpc] Called: <update>
+2014-08-08 16:49:25,717 [INFO] - [gmarpc] Called: <lookup>
+2014-08-08 16:49:25,736 [INFO] - [gmarpc] Called: <delete>
+2014-08-08 16:49:25,748 [INFO] - [gmarpc] Called: <lookup>
+2014-08-08 16:49:25,760 [INFO] - [gmarpc] Called: <create>
+2014-08-08 16:49:25,760 [ERROR] - [gmarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Field {KEY_MEMBER : True} is not of type URN)
+2014-08-08 16:49:25,761 [ERROR] - [gmarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gmavtwo.py", line 61, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/omavtwodelegate.py", line 46, in create
+    self._delegate_tools.object_consistency_check(type_, fields)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 373, in object_consistency_check
+    raise GFedv2ArgumentError('Field {' + key + ' : ' + str(value) + '} is not of type ' + field_type)
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Field {KEY_MEMBER : True} is not of type URN)
+
+2014-08-08 16:49:25,770 [INFO] - [gmarpc] Called: <create>
+2014-08-08 16:49:25,786 [INFO] - [gmarpc] Called: <update>
+2014-08-08 16:49:25,786 [ERROR] - [gmarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when updating an object : KEY_TYPE)
+2014-08-08 16:49:25,787 [ERROR] - [gmarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gmavtwo.py", line 77, in update
+    result = self._delegate.update(type_, urn, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/omavtwodelegate.py", line 62, in update
+    self._delegate_tools.object_update_check(fields, self._key_whitelist)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 346, in object_update_check
+    raise GFedv2ArgumentError('Cannot pass the following key(s) when updating an object : ' + ', '.join(whitelist))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when updating an object : KEY_TYPE)
+
+2014-08-08 16:49:25,800 [INFO] - [gmarpc] Called: <delete>
+2014-08-08 16:49:25,812 [INFO] - [gmarpc] Called: <lookup>
+2014-08-08 16:49:39,395 [INFO] - [gsarpc] Called: <get_version>
+2014-08-08 16:49:39,410 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,410 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when creating an object : SLICE_EXPIRED)
+2014-08-08 16:49:39,419 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 46, in create
+    self._delegate_tools.object_creation_check(fields, self._slice_whitelist)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 328, in object_creation_check
+    ', '.join(whitelist))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when creating an object : SLICE_EXPIRED)
+
+2014-08-08 16:49:39,427 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:39,437 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,464 [INFO] - [gsarpc] Called: <get_credentials>
+2014-08-08 16:49:39,465 [ERROR] - [gsarpc] [NOT_IMPLEMENTED_ERROR] The given method is not implemented on the server. (Method not implemented)
+2014-08-08 16:49:39,465 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 158, in get_credentials
+    result = self._delegate.get_credentials(slice_urn,  credentials, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 297, in get_credentials
+    raise GFedv2NotImplementedError("Method not implemented")
+GFedv2NotImplementedError: [NOT_IMPLEMENTED_ERROR] The given method is not implemented on the server. (Method not implemented)
+
+2014-08-08 16:49:39,476 [INFO] - [gsarpc] Called: <get_version>
+2014-08-08 16:49:39,496 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,497 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:49:39,497 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:49:39,505 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:39,514 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,515 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:49:39,515 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:49:39,523 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:39,534 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,535 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:49:39,535 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:49:39,546 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:39,555 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,555 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:49:39,555 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:49:39,563 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:39,572 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,572 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:49:39,573 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:49:39,580 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:39,589 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,590 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:49:39,590 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:49:39,598 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:39,606 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,606 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:49:39,607 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:49:39,614 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:39,622 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,623 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:49:39,623 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:49:39,632 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:39,641 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,642 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:49:39,642 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:49:39,652 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:39,665 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,665 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:49:39,666 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:49:39,678 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:39,687 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,687 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:49:39,687 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:49:39,695 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:39,704 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,704 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:49:39,705 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:49:39,713 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:39,723 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,723 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:49:39,723 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:49:39,732 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:39,741 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,742 [ERROR] - [gsarpc] [SERVER_ERROR] An error in the client/server connection (must be string or read-only buffer, not list)
+2014-08-08 16:49:39,768 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 49, in create
+    return self._slice_authority_resource_manager.create_slice(certificate, credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/osliceauthorityrm/osliceauthorityresourcemanager.py", line 119, in create_slice
+    root = ET.fromstring(credentials)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1301, in XML
+    parser.feed(text)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1641, in feed
+    self._parser.Parse(data, 0)
+TypeError: must be string or read-only buffer, not list
+
+2014-08-08 16:49:39,777 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,778 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Field {SLICE_NAME : True} is not of type STRING)
+2014-08-08 16:49:39,778 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 47, in create
+    self._delegate_tools.object_consistency_check(type_, fields)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 373, in object_consistency_check
+    raise GFedv2ArgumentError('Field {' + key + ' : ' + str(value) + '} is not of type ' + field_type)
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Field {SLICE_NAME : True} is not of type STRING)
+
+2014-08-08 16:49:39,787 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:39,797 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:49:39,797 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Member key to modify not of required type. Offending key is: PROJECT_MEMBER. Should be one of these types: ['SLICE_MEMBER', 'SLICE_ROLE'])
+2014-08-08 16:49:39,797 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 122, in modify_membership
+    result = self._delegate.modify_membership(type_, urn, self.requestCertificate(), credentials, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 158, in modify_membership
+    self._delegate_tools.member_check(['SLICE_MEMBER', 'SLICE_ROLE'],options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 295, in member_check
+    str(required_field_keys))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Member key to modify not of required type. Offending key is: PROJECT_MEMBER. Should be one of these types: ['SLICE_MEMBER', 'SLICE_ROLE'])
+
+2014-08-08 16:49:39,805 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,819 [INFO] - [gsarpc] Called: <update>
+2014-08-08 16:49:39,829 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:39,839 [INFO] - [gsarpc] Called: <delete>
+2014-08-08 16:49:39,848 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:39,858 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:49:39,868 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-08 16:49:39,877 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:49:39,887 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-08 16:49:39,897 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:49:39,906 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-08 16:49:39,916 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:49:39,925 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-08 16:49:39,934 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:49:39,944 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-08 16:49:39,954 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:49:39,963 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-08 16:49:39,972 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:39,982 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:39,982 [ERROR] - [gsarpc] [SERVER_ERROR] An error in the client/server connection (must be string or read-only buffer, not list)
+2014-08-08 16:49:39,982 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 49, in create
+    return self._slice_authority_resource_manager.create_slice(certificate, credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/osliceauthorityrm/osliceauthorityresourcemanager.py", line 119, in create_slice
+    root = ET.fromstring(credentials)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1301, in XML
+    parser.feed(text)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1641, in feed
+    self._parser.Parse(data, 0)
+TypeError: must be string or read-only buffer, not list
+
+2014-08-08 16:49:39,991 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:49:40,028 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-08 16:49:40,039 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:49:40,049 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-08 16:49:40,061 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:49:40,070 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-08 16:49:40,079 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:49:40,088 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-08 16:49:40,097 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:49:40,105 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-08 16:49:40,114 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:49:40,123 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-08 16:49:40,132 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:40,143 [INFO] - [gsarpc] Called: <update>
+2014-08-08 16:49:40,155 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:40,170 [INFO] - [gsarpc] Called: <delete>
+2014-08-08 16:49:40,184 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:40,198 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:40,218 [INFO] - [gsarpc] Called: <update>
+2014-08-08 16:49:40,220 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Invalid expiry date for object type: PROJECT)
+2014-08-08 16:49:40,221 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 79, in update
+    result = self._delegate.update(type_, urn, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 105, in update
+    raise gfed_ex.GFedv2ArgumentError("Invalid expiry date for object type: " + str(type_))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Invalid expiry date for object type: PROJECT)
+
+2014-08-08 16:49:40,233 [INFO] - [gsarpc] Called: <delete>
+2014-08-08 16:49:40,247 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:49:40,260 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:49:40,278 [INFO] - [gsarpc] Called: <update>
+2014-08-08 16:49:40,279 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when updating an object : PROJECT_NAME)
+2014-08-08 16:49:40,279 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 79, in update
+    result = self._delegate.update(type_, urn, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 107, in update
+    self._delegate_tools.object_update_check(fields, self._project_whitelist)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 346, in object_update_check
+    raise GFedv2ArgumentError('Cannot pass the following key(s) when updating an object : ' + ', '.join(whitelist))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when updating an object : PROJECT_NAME)
+
+2014-08-08 16:49:40,291 [INFO] - [gsarpc] Called: <delete>
+2014-08-08 16:49:40,305 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:39,900 [INFO] - [gsarpc] Called: <get_version>
+2014-08-08 16:56:39,919 [INFO] - [gsarpc] Called: <get_version>
+2014-08-08 16:56:39,935 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:39,935 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when creating an object : SLICE_EXPIRED)
+2014-08-08 16:56:39,935 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 46, in create
+    self._delegate_tools.object_creation_check(fields, self._slice_whitelist)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 328, in object_creation_check
+    ', '.join(whitelist))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when creating an object : SLICE_EXPIRED)
+
+2014-08-08 16:56:39,948 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:39,963 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:39,981 [INFO] - [gsarpc] Called: <get_credentials>
+2014-08-08 16:56:39,981 [ERROR] - [gsarpc] [NOT_IMPLEMENTED_ERROR] The given method is not implemented on the server. (Method not implemented)
+2014-08-08 16:56:39,981 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 158, in get_credentials
+    result = self._delegate.get_credentials(slice_urn,  credentials, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 297, in get_credentials
+    raise GFedv2NotImplementedError("Method not implemented")
+GFedv2NotImplementedError: [NOT_IMPLEMENTED_ERROR] The given method is not implemented on the server. (Method not implemented)
+
+2014-08-08 16:56:39,993 [INFO] - [gsarpc] Called: <get_version>
+2014-08-08 16:56:40,016 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,017 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:56:40,017 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:56:40,030 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,044 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,045 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:56:40,045 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:56:40,059 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,072 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,073 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:56:40,073 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:56:40,088 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,101 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,102 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:56:40,102 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:56:40,118 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,129 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,130 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:56:40,130 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:56:40,139 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,150 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,150 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:56:40,151 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:56:40,162 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,178 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,178 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:56:40,179 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:56:40,190 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,204 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,204 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:56:40,205 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:56:40,218 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,231 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,232 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:56:40,232 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:56:40,246 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,258 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,259 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:56:40,259 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:56:40,271 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,286 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,287 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:56:40,287 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:56:40,298 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,311 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,311 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:56:40,312 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:56:40,322 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,335 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,335 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:56:40,335 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:56:40,344 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,354 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,354 [ERROR] - [gsarpc] [SERVER_ERROR] An error in the client/server connection (must be string or read-only buffer, not list)
+2014-08-08 16:56:40,354 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 49, in create
+    return self._slice_authority_resource_manager.create_slice(certificate, credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/osliceauthorityrm/osliceauthorityresourcemanager.py", line 119, in create_slice
+    root = ET.fromstring(credentials)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1301, in XML
+    parser.feed(text)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1641, in feed
+    self._parser.Parse(data, 0)
+TypeError: must be string or read-only buffer, not list
+
+2014-08-08 16:56:40,363 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,364 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Field {SLICE_NAME : True} is not of type STRING)
+2014-08-08 16:56:40,364 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 47, in create
+    self._delegate_tools.object_consistency_check(type_, fields)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 373, in object_consistency_check
+    raise GFedv2ArgumentError('Field {' + key + ' : ' + str(value) + '} is not of type ' + field_type)
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Field {SLICE_NAME : True} is not of type STRING)
+
+2014-08-08 16:56:40,372 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,381 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:56:40,382 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Member key to modify not of required type. Offending key is: PROJECT_MEMBER. Should be one of these types: ['SLICE_MEMBER', 'SLICE_ROLE'])
+2014-08-08 16:56:40,382 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 122, in modify_membership
+    result = self._delegate.modify_membership(type_, urn, self.requestCertificate(), credentials, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 158, in modify_membership
+    self._delegate_tools.member_check(['SLICE_MEMBER', 'SLICE_ROLE'],options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 295, in member_check
+    str(required_field_keys))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Member key to modify not of required type. Offending key is: PROJECT_MEMBER. Should be one of these types: ['SLICE_MEMBER', 'SLICE_ROLE'])
+
+2014-08-08 16:56:40,391 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,403 [INFO] - [gsarpc] Called: <update>
+2014-08-08 16:56:40,414 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,424 [INFO] - [gsarpc] Called: <delete>
+2014-08-08 16:56:40,433 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,443 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:56:40,453 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-08 16:56:40,466 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:56:40,478 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-08 16:56:40,491 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:56:40,504 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-08 16:56:40,517 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:56:40,540 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-08 16:56:40,551 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:56:40,561 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-08 16:56:40,570 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:56:40,580 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-08 16:56:40,590 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,599 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,600 [ERROR] - [gsarpc] [SERVER_ERROR] An error in the client/server connection (must be string or read-only buffer, not list)
+2014-08-08 16:56:40,600 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 49, in create
+    return self._slice_authority_resource_manager.create_slice(certificate, credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/osliceauthorityrm/osliceauthorityresourcemanager.py", line 119, in create_slice
+    root = ET.fromstring(credentials)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1301, in XML
+    parser.feed(text)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1641, in feed
+    self._parser.Parse(data, 0)
+TypeError: must be string or read-only buffer, not list
+
+2014-08-08 16:56:40,609 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:56:40,619 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-08 16:56:40,628 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:56:40,638 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-08 16:56:40,648 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:56:40,657 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-08 16:56:40,667 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:56:40,677 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-08 16:56:40,686 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:56:40,695 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-08 16:56:40,705 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:56:40,714 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-08 16:56:40,723 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,734 [INFO] - [gsarpc] Called: <update>
+2014-08-08 16:56:40,747 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,756 [INFO] - [gsarpc] Called: <delete>
+2014-08-08 16:56:40,767 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,776 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,790 [INFO] - [gsarpc] Called: <update>
+2014-08-08 16:56:40,792 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Invalid expiry date for object type: PROJECT)
+2014-08-08 16:56:40,792 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 79, in update
+    result = self._delegate.update(type_, urn, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 105, in update
+    raise gfed_ex.GFedv2ArgumentError("Invalid expiry date for object type: " + str(type_))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Invalid expiry date for object type: PROJECT)
+
+2014-08-08 16:56:40,803 [INFO] - [gsarpc] Called: <delete>
+2014-08-08 16:56:40,816 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:56:40,830 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:56:40,847 [INFO] - [gsarpc] Called: <update>
+2014-08-08 16:56:40,848 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when updating an object : PROJECT_NAME)
+2014-08-08 16:56:40,848 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 79, in update
+    result = self._delegate.update(type_, urn, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 107, in update
+    self._delegate_tools.object_update_check(fields, self._project_whitelist)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 346, in object_update_check
+    raise GFedv2ArgumentError('Cannot pass the following key(s) when updating an object : ' + ', '.join(whitelist))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when updating an object : PROJECT_NAME)
+
+2014-08-08 16:56:40,858 [INFO] - [gsarpc] Called: <delete>
+2014-08-08 16:56:40,872 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,389 [INFO] - [gsarpc] Called: <get_version>
+2014-08-08 16:59:43,411 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,412 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when creating an object : SLICE_EXPIRED)
+2014-08-08 16:59:43,412 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 46, in create
+    self._delegate_tools.object_creation_check(fields, self._slice_whitelist)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 328, in object_creation_check
+    ', '.join(whitelist))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when creating an object : SLICE_EXPIRED)
+
+2014-08-08 16:59:43,421 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,430 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,443 [INFO] - [gsarpc] Called: <get_credentials>
+2014-08-08 16:59:43,444 [ERROR] - [gsarpc] [NOT_IMPLEMENTED_ERROR] The given method is not implemented on the server. (Method not implemented)
+2014-08-08 16:59:43,444 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 158, in get_credentials
+    result = self._delegate.get_credentials(slice_urn,  credentials, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 297, in get_credentials
+    raise GFedv2NotImplementedError("Method not implemented")
+GFedv2NotImplementedError: [NOT_IMPLEMENTED_ERROR] The given method is not implemented on the server. (Method not implemented)
+
+2014-08-08 16:59:43,451 [INFO] - [gsarpc] Called: <get_version>
+2014-08-08 16:59:43,466 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,466 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:59:43,467 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:59:43,475 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,486 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,486 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:59:43,486 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:59:43,496 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,508 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,508 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:59:43,509 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:59:43,520 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,533 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,534 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:59:43,534 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:59:43,545 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,557 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,558 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:59:43,558 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:59:43,568 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,580 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,581 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:59:43,581 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:59:43,592 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,604 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,605 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:59:43,605 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:59:43,614 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,628 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,629 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:59:43,629 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:59:43,638 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,649 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,649 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:59:43,649 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:59:43,659 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,669 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,669 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:59:43,669 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:59:43,677 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,685 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,686 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:59:43,686 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:59:43,693 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,702 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,703 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:59:43,703 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:59:43,714 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,724 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,724 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+2014-08-08 16:59:43,724 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 48, in create
+    self._delegate_tools.slice_name_check(fields.get('SLICE_NAME')) #Specific check for slice name restrictionas
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 305, in slice_name_check
+    raise GFedv2ArgumentError('SLICE_NAME field must be <= 19 characters, must only contain alphanumeric '
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (SLICE_NAME field must be <= 19 characters, must only contain alphanumeric characters or hyphens and those hyphens must not be leading.)
+
+2014-08-08 16:59:43,732 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,741 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,742 [ERROR] - [gsarpc] [SERVER_ERROR] An error in the client/server connection (must be string or read-only buffer, not list)
+2014-08-08 16:59:43,742 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 49, in create
+    return self._slice_authority_resource_manager.create_slice(certificate, credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/osliceauthorityrm/osliceauthorityresourcemanager.py", line 119, in create_slice
+    root = ET.fromstring(credentials)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1301, in XML
+    parser.feed(text)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1641, in feed
+    self._parser.Parse(data, 0)
+TypeError: must be string or read-only buffer, not list
+
+2014-08-08 16:59:43,750 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,750 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Field {SLICE_NAME : True} is not of type STRING)
+2014-08-08 16:59:43,751 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 47, in create
+    self._delegate_tools.object_consistency_check(type_, fields)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 373, in object_consistency_check
+    raise GFedv2ArgumentError('Field {' + key + ' : ' + str(value) + '} is not of type ' + field_type)
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Field {SLICE_NAME : True} is not of type STRING)
+
+2014-08-08 16:59:43,758 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,767 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:59:43,767 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Member key to modify not of required type. Offending key is: PROJECT_MEMBER. Should be one of these types: ['SLICE_MEMBER', 'SLICE_ROLE'])
+2014-08-08 16:59:43,768 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 122, in modify_membership
+    result = self._delegate.modify_membership(type_, urn, self.requestCertificate(), credentials, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 158, in modify_membership
+    self._delegate_tools.member_check(['SLICE_MEMBER', 'SLICE_ROLE'],options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 295, in member_check
+    str(required_field_keys))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Member key to modify not of required type. Offending key is: PROJECT_MEMBER. Should be one of these types: ['SLICE_MEMBER', 'SLICE_ROLE'])
+
+2014-08-08 16:59:43,777 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,793 [INFO] - [gsarpc] Called: <update>
+2014-08-08 16:59:43,804 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,814 [INFO] - [gsarpc] Called: <delete>
+2014-08-08 16:59:43,824 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,834 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:59:43,847 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-08 16:59:43,859 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:59:43,870 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-08 16:59:43,880 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:59:43,892 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-08 16:59:43,906 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:59:43,915 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-08 16:59:43,925 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:59:43,935 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-08 16:59:43,944 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:59:43,955 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-08 16:59:43,965 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:43,974 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:43,975 [ERROR] - [gsarpc] [SERVER_ERROR] An error in the client/server connection (must be string or read-only buffer, not list)
+2014-08-08 16:59:43,975 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 63, in create
+    result = self._delegate.create(type_, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 49, in create
+    return self._slice_authority_resource_manager.create_slice(certificate, credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/osliceauthorityrm/osliceauthorityresourcemanager.py", line 119, in create_slice
+    root = ET.fromstring(credentials)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1301, in XML
+    parser.feed(text)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1641, in feed
+    self._parser.Parse(data, 0)
+TypeError: must be string or read-only buffer, not list
+
+2014-08-08 16:59:43,983 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:59:43,992 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-08 16:59:44,002 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:59:44,011 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-08 16:59:44,020 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:59:44,030 [INFO] - [gsarpc] Called: <lookup_members>
+2014-08-08 16:59:44,039 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:59:44,048 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-08 16:59:44,059 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:59:44,069 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-08 16:59:44,078 [INFO] - [gsarpc] Called: <modify_membership>
+2014-08-08 16:59:44,088 [INFO] - [gsarpc] Called: <lookup_for_member>
+2014-08-08 16:59:44,097 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:44,107 [INFO] - [gsarpc] Called: <update>
+2014-08-08 16:59:44,117 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:44,129 [INFO] - [gsarpc] Called: <delete>
+2014-08-08 16:59:44,138 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:44,148 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:44,161 [INFO] - [gsarpc] Called: <update>
+2014-08-08 16:59:44,163 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Invalid expiry date for object type: PROJECT)
+2014-08-08 16:59:44,163 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 79, in update
+    result = self._delegate.update(type_, urn, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 105, in update
+    raise gfed_ex.GFedv2ArgumentError("Invalid expiry date for object type: " + str(type_))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Invalid expiry date for object type: PROJECT)
+
+2014-08-08 16:59:44,172 [INFO] - [gsarpc] Called: <delete>
+2014-08-08 16:59:44,183 [INFO] - [gsarpc] Called: <lookup>
+2014-08-08 16:59:44,194 [INFO] - [gsarpc] Called: <create>
+2014-08-08 16:59:44,207 [INFO] - [gsarpc] Called: <update>
+2014-08-08 16:59:44,207 [ERROR] - [gsarpc] [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when updating an object : PROJECT_NAME)
+2014-08-08 16:59:44,207 [ERROR] - [gsarpc] Traceback (most recent call last):
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedrpc2/fedrpctwo/gsavtwo.py", line 79, in update
+    result = self._delegate.update(type_, urn, self.requestCertificate(), credentials, fields, options)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/ofed2/osavtwodelegate.py", line 107, in update
+    self._delegate_tools.object_update_check(fields, self._project_whitelist)
+  File "/home/umar.toseef/ALIEN/C-BAS/Ohouse/src/plugins/fedtools/delegatetools.py", line 346, in object_update_check
+    raise GFedv2ArgumentError('Cannot pass the following key(s) when updating an object : ' + ', '.join(whitelist))
+GFedv2ArgumentError: [ARGUMENT_ERROR] The arguments provided to the call were mal-formed or mutually inconsistent. (Cannot pass the following key(s) when updating an object : PROJECT_NAME)
+
+2014-08-08 16:59:44,217 [INFO] - [gsarpc] Called: <delete>
+2014-08-08 16:59:44,236 [INFO] - [gsarpc] Called: <lookup>
