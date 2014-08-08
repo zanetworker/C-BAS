@@ -8,12 +8,7 @@ def api_call(method_name, endpoint, params=[], user_name='alice', verbose=False)
     res = ssl_call(method_name, params, endpoint, key_path=key_path, cert_path=cert_path)
     if verbose:
         print_call(method_name, params, res)
-    code = res.get('code', None)
-    value = res.get('value', None)
-    output = res.get('output', None)
-    print code, value, output
-    return code, value, output
-#    return res.get('code', None), res.get('value', None), res.get('output', None)
+    return res.get('code', None), res.get('value', None), res.get('output', None)
 
 class SafeTransportWithCert(xmlrpclib.SafeTransport):
     """Helper class to force the right certificate for the transport class."""
