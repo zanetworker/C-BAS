@@ -116,7 +116,7 @@ class OSliceAuthorityResourceManager(object):
 
         u_c = None
         #credentials_testing = credentials #self._resource_manager_tools.read_file(OSliceAuthorityResourceManager.KEY_PATH + "credentials_test")
-        root = ET.fromstring(credentials[0]['SFA']) #short-term solution to fix string handling
+        root = ET.fromstring(credentials[0]['SFA']) #FIXME: short-term solution to fix string handling, take first credential of SFA format
 
         #print '-->'
         #print credentials
