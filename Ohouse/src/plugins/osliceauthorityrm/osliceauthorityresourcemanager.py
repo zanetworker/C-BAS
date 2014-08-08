@@ -116,7 +116,7 @@ class OSliceAuthorityResourceManager(object):
 
         u_c = None
         #credentials_testing = credentials #self._resource_manager_tools.read_file(OSliceAuthorityResourceManager.KEY_PATH + "credentials_test")
-        root = ET.fromstring(credentials)
+        root = ET.fromstring(credentials[0]['SFA']) #short-term solution to fix string handling
 
         #print '-->'
         #print credentials
